@@ -123,7 +123,7 @@ For ease of analysis, you may want to sort your dataframe according to a few fea
 df_after = df_before.sort_values(['feature1', 'feature2', 'feature3', 'feature4']).reset_index(drop=True)
 ```
 #### 2.3.5 Changing dtype of features to better suit context of Dataset
-Before we continue, this is a overview of the common datatypes you will encounter in Pandas. To find out more, [check out the official Pandas Documentation](https://pandas.pydata.org/pandas-docs/stable/getting_started/basics.html#dtypes).
+Before we continue, this is a overview of the common datatypes you will encounter in Pandas. To find out more, [check out the official Pandas Documentation](https://pandas.pydata.org/pandas-docs/stable/getting_started/basics.html#dtypes).  
 ![Image from https://pbpython.com/pandas_dtypes.html](images/image_04.png)  
 We will first have to find out the datatype for each feature in the dataframe. This can be done using the `.info()` method or the `.dtypes` function.
 ```bash
