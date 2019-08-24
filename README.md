@@ -56,11 +56,11 @@ Data Analysis typically involves the following steps:
 3. Data Cleaning/Processing
 > Some common errors in data to lookout for are missing/corrupted values, datatype mismatches.
 4. EDA(Exploratory Data Analysis)/Visualization
-> Find patterns in your data and compute vital statistics (e.g.Mean,Median,Standard deviation,etc)
+> Find patterns in your data and compute vital statistics (e.g.Mean,Median, Standard deviation, etc)
 5. Data Modelling
 > Split your data in train and test sets. Create a machine learning model from your training set for prediction.
 6. Data Evaluation
-> Evaluate your model using a suitable metric (e.g.Mean squared error,f1 score,etc) and try to improve the score that metric.
+> Evaluate your model using a suitable metric (e.g.Mean squared error, f1 score, etc) and try to improve the score that metric.
 
 ## 2. HDB Resale Prices Example
 *Dataset taken from [Data.gov.sg](https://data.gov.sg/group/infrastructure)*
@@ -77,7 +77,8 @@ Now that we've discussed the Data Science process, let's dive into our example.
 [Numpy](https://www.numpy.org/) is used to manipulate large, multi-dimensional arrays and matrices, which is very useful for processing data for Data modelling.
 
 #### 2.1.2 For Visualization
-![](images/matplotlib.png)
+![](images/matplotlib.png)  
+
 [Matplotlib](https://matplotlib.org/tutorials/index.html) is a multi-platform data visualization library built on NumPy arrays. 
 [Seaborn](https://seaborn.pydata.org/introduction.html?highlight=jointplot) is based on matplotlib. It provides a high-level interface for drawing attractive and informative statistical graphics.
 
@@ -123,7 +124,7 @@ df_after = df_before.sort_values(['feature1', 'feature2', 'feature3', 'feature4'
 ```
 #### 2.3.5 Changing dtype of features to better suit context of Dataset
 Before we continue, this is a overview of the common datatypes you will encounter in Pandas. To find out more, [check out the official Pandas Documentation](https://pandas.pydata.org/pandas-docs/stable/getting_started/basics.html#dtypes).
-![Image from https://pbpython.com/pandas_dtypes.html](images/image_04.png)
+![Image from https://pbpython.com/pandas_dtypes.html](images/image_04.png)  
 We will first have to find out the datatype for each feature in the dataframe. This can be done using the `.info()` method or the `.dtypes` function.
 ```bash
 df_to_check.info()
@@ -234,7 +235,7 @@ sns.catplot(y='categorical_variable_name', data=df, kind="count", height=8)
 
 ### 2.5 Data Modelling (Machine Learning)
 #### 2.5.1 What is Linear Regression
-![Image by SPSS TUTORIALS](images/LR.png)
+![Image by SPSS TUTORIALS](images/LR.png)  
 Linear Regression is all about trying to find the best fit line for your datapoints. The intuition is to minimize the “Sum of Squared Errors” (SSE), which is the sum difference between actual value and predicted value.
 The goal is to eventually generalize the dataset and predict the dependent variable with reasonable accuracy given the independent variable.
 #### 2.5.1 Splitting our dataset in Train and Test sets
