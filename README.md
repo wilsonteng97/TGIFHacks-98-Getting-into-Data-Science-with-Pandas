@@ -1,3 +1,4 @@
+
 # NTUOSS Pandas Basics Workshop
 
 *by [Wilson Thurman Teng](https://github.com/wilsonteng97) for [NTU Open Source Society](https://github.com/ntuoss)*
@@ -38,13 +39,28 @@ Colab is a free Jupyter notebook environment that requires no setup, and runs en
 
 ### 1.2 Setting up Google Colab
 
+**Instructions for first-timers using Google Colab on Google Drive:**
 1. Create a gmail account (if you do not have one already).	
-2. Find and click on "HDB_ResalePrices.ipynb".
-3. Select "Open with", select "Connect more apps".
-4. Search for "colab", press "Connect".
-5. Select "Open with Google Colaboratory".
-6. Drag the 3 files from Data into Google Colab
+2. Download the `.zip` file from [this link](https://github.com/wilsonteng97/NTUOSS-PandasBasics/archive/master.zip).
+3. Extract the `.zip` file, find `HDB_ResalePrices.ipynb`.
+4. Create a a new Folder **TGIF Pandas Basics** on your Google Drive.
+5. Upload `HDB_ResalePrices.ipynb` inside this new folder.
+6. Click on `HDB_ResalePrices.ipynb`.
+7. Select "Open with", select "Connect more apps".
+8. Search for "colab", press "Connect".
+9. Select "Open with Google Colaboratory".
+10. Drag the 3 files from `Data` (in your extracted `.zip` file) into Google Colab.
 ![](images/image_02.png)
+
+**Instructions for those who have used Google Colab on Google Drive before:**
+1. Download the `.zip` file from [this link](https://github.com/wilsonteng97/NTUOSS-PandasBasics/archive/master.zip). 
+2. Extract the `.zip` file, find `HDB_ResalePrices.ipynb`.
+3. Create a a new Folder **TGIF Pandas Basics** on your Google Drive.
+4. Upload `HDB_ResalePrices.ipynb` inside this new folder.
+5. Right-click on `HDB_ResalePrices.ipynb`, mouse-over "Open with" and select "Google Colaboratory".  
+![](images/access_pandas_before.png)  
+6. Drag the 3 files from `Data` (in your extracted `.zip` file) into Google Colab.
+![](images/image_02.png)  
 
 ### 1.3 Data Science Process
 
@@ -65,7 +81,12 @@ Data Analysis typically involves the following steps:
 ## 2. HDB Resale Prices Example
 *Dataset taken from [Data.gov.sg](https://data.gov.sg/group/infrastructure)*
 
-Now that we've discussed the Data Science process, let's dive into our example.
+Now that we've discussed the Data Science process, let's dive into our example. As some of you may have guessed, we are going to predict the price of HDB resale flats!
+
+**Problem Statement:**
+*Can we predict the the resale price of a house given the floor area of the house (in m<sup>2</sup>)?*
+
+As such, we are using the `floor_area_sqm` feature to predict `resale_price`. 
 
 ### 2.1 Import Libraries
 
@@ -175,9 +196,12 @@ Try changing it to `"v"`(Vertical)!
 ```bash
 import seaborn as sns
 sns.boxplot(df['variable_you_want_to_analyze'], orient="h")
-```
-**Understanding a Boxplot**
-![image from https://chartio.com/resources/tutorials/what-is-a-box-plot/](images/boxplot.png)
+```  
+
+**Understanding a Boxplot**  
+
+![image from https://chartio.com/resources/tutorials/what-is-a-box-plot/](images/boxplot.png)  
+
 ##### 2.4.1(b) Distplot 
 This will draw a histogram and fit a [kernel density estimate (KDE)](https://mathisonian.github.io/kde/).
 ```bash
@@ -235,8 +259,9 @@ sns.catplot(y='categorical_variable_name', data=df, kind="count", height=8)
 
 ### 2.5 Data Modelling (Machine Learning)
 #### 2.5.1 What is Linear Regression
-![Image by SPSS TUTORIALS](images/LR.png)  
-Linear Regression is all about trying to find the best fit line for your datapoints. The intuition is to minimize the “Sum of Squared Errors” (SSE), which is the sum difference between actual value and predicted value.
+![Image by SPSS TUTORIALS](images/LR1.png)  
+Linear Regression is all about trying to find the best fit line for your datapoints. The intuition is to minimize the “Sum of Squared Errors” (SSE), which is the sum difference between actual value and predicted value.  
+![Image by Wikipedia-Linear_least_squares_example2](images/LR2.png)  
 The goal is to eventually generalize the dataset and predict the dependent variable with reasonable accuracy given the independent variable.
 #### 2.5.1 Splitting our dataset in Train and Test sets
 Before we begin Data Modelling, we have to split our dataset into train and test sets so we have a measure to evaluate our model's performance.
@@ -294,4 +319,36 @@ plt.show()
 2. Next, we plot all the datapoints in the test set.
 3. Lastly, we plot the resale_price that we have predicted from `X_test` using our best-fit line. 
 
-## 3. Further Resources for learning
+## 3. Further Learning  
+
+### 3.1 Extension of today's workshop:
+#### Other interesting questions
+- What is the best/worse times of the year to sell your house? By how much do prices change?
+- How is the travel time from different locations to central area affecting the HDB resale price?
+#### Interesting Datasets to consider
+- [Airbnb (Seattle) Open Data](https://www.kaggle.com/airbnb/seattle)
+- [Singapore's Pollution Levels](https://www.kaggle.com/ruvenguna/all-data-to-use)
+
+### 3.2 Setting up your Data Analytics Environment!
+
+#### 3.2.1 Anaconda Distribution
+![](images/anaconda.png)
+[Anaconda](https://www.anaconda.com/distribution/#download-section) is one of several Python distributions. Python on it’s own is not going to be useful unless an IDE is installed. This is where Anaconda comes into picture.  
+
+**The following are some of the default applications/libraries available by default that i personally find useful:**
+- [Jupyter Notebook](https://en.wikipedia.org/wiki/Project_Jupyter#Jupyter_Notebook "Project Jupyter") (Data Science Environment)
+- [JupyterLab](https://en.wikipedia.org/wiki/Project_Jupyter#Jupyter_Lab "Project Jupyter") (Simply put, Jupyter Notebook on the web)
+- [Rstudio](https://en.wikipedia.org/wiki/Rstudio "Rstudio") (For those who are less comfortable with programming)
+- [Visual Studio Code](https://en.wikipedia.org/wiki/Visual_Studio_Code "Visual Studio Code") (One of the most powerful/easy to use code editors out there! Props to Microsoft! Or you can use [VSCodium](https://vscodium.com/) for those who are worried of Telemetry data collection)
+- Tons of Datascience Libraries pre-installed!  
+
+#### 3.2.2 Step-by-Step Setup guide - Guide by Datacamp  
+Setup on [Windows](https://www.datacamp.com/community/tutorials/installing-anaconda-windows)  
+Setup on [Mac](https://www.datacamp.com/community/tutorials/installing-anaconda-mac-os-x)
+
+### 3.3 Get Rewarded?? 
+![](images/kaggle.png)
+[Kaggle](https://www.kaggle.com/competitions) is where you can join Datascience competitions either alone or as a team and earn prize money. Although i would highly recommend to check out the ["Getting Started"](https://www.kaggle.com/competitions?sortBy=recentlyCreated&group=general&page=1&pageSize=20&turbolinks%5BrestorationIdentifier%5D=1aa400b0-1c2b-410b-a880-aae48e7e1930&category=gettingStarted) Category first.
+
+
+### Good luck on your Data Science Journey!
