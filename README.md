@@ -9,7 +9,7 @@ This workshop features a hands-on approach to learning the basics of [Pandas](ht
 
 ---
 
-![](images/image_00.png)
+![](images/image_00_new.png)
 *Artwork by [@hyde-brendan](https://github.com/hyde-brendan)*
 
 ### Workshop Details
@@ -332,7 +332,7 @@ plt.show()
 ### 3.2 Setting up your Data Analytics Environment!
 
 #### 3.2.1 Anaconda Distribution
-![](images/anaconda.png)
+![](images/anaconda.png)  
 [Anaconda](https://www.anaconda.com/distribution/#download-section) is one of several Python distributions. Python on it’s own is not going to be useful unless an IDE is installed. This is where Anaconda comes into picture.  
 
 **The following are some of the default applications/libraries available by default that i personally find useful:**
