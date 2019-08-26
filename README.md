@@ -238,7 +238,7 @@ import seaborn as sns
 sns.jointplot(x='x_variable', y='y_variable', data=df,
               height=10, edgecolors='w')
 ```
-![](jointplot.png)
+![](images/jointplot.png)
 ##### 2.4.2(b) Heatmap
 We can also use a heatmap to plot the correlations between 2 variables.
 ```bash
